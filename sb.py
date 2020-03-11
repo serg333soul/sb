@@ -1,6 +1,13 @@
 def create_table():
-    arr = [list(range(1, 11)) for i in range(10)]
-    for l in arr:
+    SPACE = ' '
+    L_S = '0abcdefghij '
+    
+    f = [[i if j * i == 0 else SPACE for j in range(12)] for i in range(12)]
+    f[0] = [L_S[i] for i in range(12)]
+
+    for l in f:
         print(l)
+
+        
 
 print(create_table())
